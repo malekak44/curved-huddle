@@ -1,0 +1,51 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 75rem;
+}
+
+.header {
+  display: flex;
+  margin: 4.5rem auto;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo {
+  width: 14rem;
+}
+
+.header__btn {
+  color: #ff52bf;
+  border-radius: 1.2rem;
+  padding: 0.5rem 1.75rem;
+  border: 1px solid #ff52bf;
+  text-transform: capitalize;
+}
+
+.hero {
+  margin: 5rem auto;
+}
+
+.hero__text {
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */
