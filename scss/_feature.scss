@@ -1,0 +1,101 @@
+.features {
+    margin: 4rem auto;
+
+    @include breakpoint-up(medium) {
+        margin: 9rem auto;
+    }
+
+    .feature {
+        margin-bottom: 2.5rem;
+        background-repeat: no-repeat;
+
+
+        &:nth-child(1) {
+            background-image: url("../images/bg-section-top-desktop-1.svg"), url("../images/bg-section-bottom-desktop-1.svg");
+            background-position: top, bottom;
+        }
+
+        &:nth-child(2) {
+            background: none;
+        }
+
+        &__div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            // background: #F6FBFF;
+            padding: 13rem 8rem;
+
+            @include breakpoint-up(medium) {
+                flex-direction: row;
+                // padding: 3rem 2rem 3rem 8rem;
+            }
+
+        }
+
+
+        &__text {
+            flex: 1;
+            text-align: center;
+
+            @include breakpoint-up(medium) {
+                text-align: left;
+            }
+
+            h1 {
+                color: $veryDarkCyan;
+                margin-bottom: 0;
+                font-size: 1.2rem;
+                font-family: $headingFont;
+
+                @include breakpoint-up(medium) {
+                    font-size: 2.3rem;
+                }
+            }
+
+            p {
+                line-height: 1.5;
+                color: $grayishBlue;
+                font-size: 0.9375rem;
+
+                @include breakpoint-up(medium) {
+                    font-size: 1.125rem;
+                }
+            }
+        }
+
+        &__image {
+            flex: 1;
+            order: -1;
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 1rem;
+
+            @include breakpoint-up(medium) {
+                order: 0;
+                margin-bottom: 0;
+            }
+
+            &:nth-child(1) {
+                display: block;
+            }
+
+            img {
+                width: 90%;
+                display: block;
+                margin: auto;
+
+                @include breakpoint-up(medium) {
+                    width: 75%;
+                    display: inline;
+                }
+            }
+        }
+    }
+}
+
+
+body {
+    background: black;
+}

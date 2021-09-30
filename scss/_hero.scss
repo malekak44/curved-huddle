@@ -115,9 +115,9 @@
             }
 
             p {
-                color: #88D;
                 margin-top: 0.5rem;
                 text-align: center;
+                color: $grayishBlue;
                 font-size: 1.0625rem;
 
                 @include breakpoint-up(medium) {

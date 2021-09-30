@@ -236,9 +236,9 @@ h3 {
 }
 
 .hero__stats__div p {
-  color: #88D;
   margin-top: 0.5rem;
   text-align: center;
+  color: #808d99;
   font-size: 1.0625rem;
 }
 
@@ -246,5 +246,115 @@ h3 {
   .hero__stats__div p {
     font-size: 1.375rem;
   }
+}
+
+.features {
+  margin: 4rem auto;
+}
+
+@media (min-width: 40em) {
+  .features {
+    margin: 9rem auto;
+  }
+}
+
+.features .feature {
+  margin-bottom: 2.5rem;
+  background-repeat: no-repeat;
+}
+
+.features .feature:nth-child(1) {
+  background-image: url("../images/bg-section-top-desktop-1.svg"), url("../images/bg-section-bottom-desktop-1.svg");
+  background-position: top, bottom;
+}
+
+.features .feature:nth-child(2) {
+  background: none;
+}
+
+.features .feature__div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 13rem 8rem;
+}
+
+@media (min-width: 40em) {
+  .features .feature__div {
+    flex-direction: row;
+  }
+}
+
+.features .feature__text {
+  flex: 1;
+  text-align: center;
+}
+
+@media (min-width: 40em) {
+  .features .feature__text {
+    text-align: left;
+  }
+}
+
+.features .feature__text h1 {
+  color: #00252e;
+  margin-bottom: 0;
+  font-size: 1.2rem;
+  font-family: "Poppins", sans-serif;
+}
+
+@media (min-width: 40em) {
+  .features .feature__text h1 {
+    font-size: 2.3rem;
+  }
+}
+
+.features .feature__text p {
+  line-height: 1.5;
+  color: #808d99;
+  font-size: 0.9375rem;
+}
+
+@media (min-width: 40em) {
+  .features .feature__text p {
+    font-size: 1.125rem;
+  }
+}
+
+.features .feature__image {
+  flex: 1;
+  order: -1;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 40em) {
+  .features .feature__image {
+    order: 0;
+    margin-bottom: 0;
+  }
+}
+
+.features .feature__image:nth-child(1) {
+  display: block;
+}
+
+.features .feature__image img {
+  width: 90%;
+  display: block;
+  margin: auto;
+}
+
+@media (min-width: 40em) {
+  .features .feature__image img {
+    width: 75%;
+    display: inline;
+  }
+}
+
+body {
+  background: black;
 }
 /*# sourceMappingURL=style.css.map */
