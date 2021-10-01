@@ -1,85 +1,10 @@
 .feature__container {
-    .grow__together {
-        .feature__top__bg {
-            background-image: url("../images/bg-section-top-mobile-1.svg");
-
-            @include breakpoint-up(medium) {
-                background-image: url("../images/bg-section-top-desktop-1.svg");
-            }
-        }
-
-        .feature__bottom__bg {
-            background-image: url("../images/bg-section-bottom-mobile-1.svg");
-
-            @include breakpoint-up(medium) {
-                background-image: url("../images/bg-section-bottom-desktop-1.svg");
-            }
-        }
-
-        .feature__image img {
-            width: 69%;
-
-            @include breakpoint-up(medium) {
-                width: 65%;
-            }
-        }
-    }
-
-    .flowing__conversation {
-        .feature__info {
-            margin: 3.3rem auto 0;
-
-            @include breakpoint-up(medium) {
-                margin: 4.5rem auto;
-            }
-        }
-
-        .feature__text {
-            flex: 1;
-
-            p {
-                width: auto;
-
-                @include breakpoint-up(medium) {
-                    width: 30rem;
-                }
-            }
-        }
-
-        .feature__image img {
-            width: 71%;
-
-            @include breakpoint-up(medium) {
-                width: 80%;
-            }
-        }
-    }
-
-    .your__users {
-        .feature__top__bg {
-            background-image: url("../images/bg-section-top-mobile-2.svg");
-
-            @include breakpoint-up(medium) {
-                background-image: url("../images/bg-section-top-desktop-2.svg");
-            }
-        }
-
-        .feature__bottom__bg {
-            background-image: url("../images/bg-section-bottom-mobile-2.svg");
-
-            @include breakpoint-up(medium) {
-                background-image: url("../images/bg-section-bottom-desktop-2.svg");
-            }
-        }
-    }
-
     .feature {
         margin: 0 auto;
 
         @include breakpoint-up(medium) {
             margin: 4.5rem auto;
         }
-
 
         &__info {
             display: flex;
@@ -167,7 +92,7 @@
             }
 
             img {
-                width: 70%;
+                width: 71%;
                 display: block;
                 margin: auto;
 
@@ -175,6 +100,98 @@
                     width: 67%;
                     display: inline;
                 }
+            }
+        }
+    }
+
+    .grow__together {
+        .feature__top__bg {
+            background-image: url("../images/bg-section-top-mobile-1.svg");
+
+            @include breakpoint-up(medium) {
+                background-image: url("../images/bg-section-top-desktop-1.svg");
+            }
+        }
+
+        .feature__bottom__bg {
+            background-image: url("../images/bg-section-bottom-mobile-1.svg");
+
+            @include breakpoint-up(medium) {
+                background-image: url("../images/bg-section-bottom-desktop-1.svg");
+            }
+        }
+
+        .feature__image img {
+            width: 69%;
+
+            @include breakpoint-up(medium) {
+                width: 65%;
+            }
+        }
+    }
+
+    .flowing__conversation {
+        .feature__info {
+            margin: 3.3rem auto 0;
+
+            @include breakpoint-up(medium) {
+                margin: 4.5rem auto;
+            }
+        }
+
+        .feature__text {
+            flex: 1;
+
+            p {
+                width: auto;
+
+                @include breakpoint-up(medium) {
+                    width: 30rem;
+                }
+            }
+        }
+
+        .feature__image img {
+            width: 71%;
+            margin-bottom: 0.7rem;
+
+            @include breakpoint-up(medium) {
+                width: 80%;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .your__users {
+        margin-top: 4rem;
+
+        @include breakpoint-up(medium) {
+            margin-top: 0;
+        }
+
+        .feature__info {
+            padding: 1.3rem 0 6rem;
+
+            @include breakpoint-up(medium) {
+                padding: 3.5rem 0 2rem 7.5rem;
+            }
+        }
+
+        .feature__top__bg {
+            background-image: url("../images/bg-section-top-mobile-2.svg");
+
+            @include breakpoint-up(medium) {
+                background-image: url("../images/bg-section-top-desktop-2.svg");
+            }
+        }
+
+        .feature__bottom__bg {
+            height: 105px;
+            background-image: url("../images/bg-section-bottom-mobile-2.svg");
+
+            @include breakpoint-up(medium) {
+                height: 145px;
+                background-image: url("../images/bg-section-bottom-desktop-2.svg");
             }
         }
     }

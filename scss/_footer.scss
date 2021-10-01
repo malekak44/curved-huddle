@@ -1,0 +1,148 @@
+.footer {
+    color: #fff;
+
+    &__top__bg {
+        height: 155px;
+        background: url("../images/bg-footer-top-desktop.svg");
+        background-repeat: no-repeat;
+    }
+
+    &__wrapper {
+        background: $veryDarkCyan;
+        padding: 7rem 7rem 6rem;
+        margin: auto;
+        display: block;
+        grid-template-columns: 1.3fr 1fr;
+
+        @include breakpoint-up(medium) {
+            display: grid;
+        }
+    }
+
+    &__logo {
+        width: 10.75rem;
+
+        @include breakpoint-up(medium) {
+            width: 13.5rem;
+        }
+    }
+
+    &__desc {
+        display: grid;
+        grid-template-columns: 0.06fr 1fr;
+        align-items: center;
+
+        &:nth-child(2) {
+            margin: 0.5rem 0 0.8rem;
+        }
+
+        p {
+            width: 18.7rem;
+            font-size: 15px;
+            line-height: 1.7;
+            color: $veryPaleBlue;
+
+            @include breakpoint-up(medium) {
+                width: 20.625rem;
+            }
+
+            &:nth-child(2) {
+                margin: 0;
+            }
+        }
+
+        img {
+            width: 1rem;
+
+            @include breakpoint-up(medium) {
+                width: 18px;
+            }
+        }
+    }
+
+    &__social {
+        margin-top: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 8.5rem;
+
+        img {
+            width: 30px;
+
+            &:hover {
+                cursor: pointer;
+                opacity: 0.7;
+            }
+        }
+    }
+
+    // &__main {}
+
+    &__newsletter {
+        h2 {
+            font-size: 21.5px;
+            font-family: $normalFont;
+            font-weight: 600;
+            margin-top: 0;
+            text-transform: uppercase;
+        }
+
+        p {
+            width: 21rem;
+            line-height: 1.7;
+            color: $veryPaleBlue;
+        }
+
+        &__form {
+            padding: 1.5rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: auto;
+            margin: auto;
+            flex-direction: column;
+
+            @include breakpoint-up(large) {
+                width: 30rem;
+                flex-direction: row;
+            }
+
+            input {
+                width: 90%;
+                padding: 14px 18px;
+                font-size: 16px;
+                border: none;
+                outline: none;
+                border-radius: 5px;
+
+                @include breakpoint-up(large) {
+                    width: 62%;
+                }
+            }
+
+            .form__btn {
+                width: 90%;
+                padding: 0.75rem 1.25rem;
+                background: $pink;
+                font-weight: 600;
+                font-size: 14px;
+                color: white;
+                border-radius: 5px;
+                border: 2px solid transparent;
+                transition: all 0.3s ease-in-out;
+                margin-top: 1rem;
+                text-align: center;
+
+                @include breakpoint-up(large) {
+                    width: 30%;
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+
+    &__small__p {
+        font-size: 14px !important;
+    }
+}
