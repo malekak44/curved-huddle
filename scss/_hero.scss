@@ -1,8 +1,8 @@
 .hero {
-    margin: 8rem auto;
+    margin: 8rem auto 1rem;
 
     @include breakpoint-up(medium) {
-        margin: 12.8rem auto;
+        margin: 12.8rem auto 5rem;
     }
 
     &__text {
@@ -118,7 +118,7 @@
                 margin-top: 0.5rem;
                 text-align: center;
                 color: $grayishBlue;
-                font-size: 1.0625rem;
+                font-size: 14px;
 
                 @include breakpoint-up(medium) {
                     font-size: 1.375rem;

@@ -1,42 +1,124 @@
-.features {
-    margin: 4rem auto;
+.feature__container {
+    .grow__together {
+        .feature__top__bg {
+            background-image: url("../images/bg-section-top-mobile-1.svg");
 
-    @include breakpoint-up(medium) {
-        margin: 9rem auto;
+            @include breakpoint-up(medium) {
+                background-image: url("../images/bg-section-top-desktop-1.svg");
+            }
+        }
+
+        .feature__bottom__bg {
+            background-image: url("../images/bg-section-bottom-mobile-1.svg");
+
+            @include breakpoint-up(medium) {
+                background-image: url("../images/bg-section-bottom-desktop-1.svg");
+            }
+        }
+
+        .feature__image img {
+            width: 69%;
+
+            @include breakpoint-up(medium) {
+                width: 65%;
+            }
+        }
+    }
+
+    .flowing__conversation {
+        .feature__info {
+            margin: 3.3rem auto 0;
+
+            @include breakpoint-up(medium) {
+                margin: 4.5rem auto;
+            }
+        }
+
+        .feature__text {
+            flex: 1;
+
+            p {
+                width: auto;
+
+                @include breakpoint-up(medium) {
+                    width: 30rem;
+                }
+            }
+        }
+
+        .feature__image img {
+            width: 71%;
+
+            @include breakpoint-up(medium) {
+                width: 80%;
+            }
+        }
+    }
+
+    .your__users {
+        .feature__top__bg {
+            background-image: url("../images/bg-section-top-mobile-2.svg");
+
+            @include breakpoint-up(medium) {
+                background-image: url("../images/bg-section-top-desktop-2.svg");
+            }
+        }
+
+        .feature__bottom__bg {
+            background-image: url("../images/bg-section-bottom-mobile-2.svg");
+
+            @include breakpoint-up(medium) {
+                background-image: url("../images/bg-section-bottom-desktop-2.svg");
+            }
+        }
     }
 
     .feature {
-        margin-bottom: 2.5rem;
-        background-repeat: no-repeat;
+        margin: 0 auto;
 
-
-        &:nth-child(1) {
-            background-image: url("../images/bg-section-top-desktop-1.svg"), url("../images/bg-section-bottom-desktop-1.svg");
-            background-position: top, bottom;
+        @include breakpoint-up(medium) {
+            margin: 4.5rem auto;
         }
 
-        &:nth-child(2) {
-            background: none;
-        }
 
-        &__div {
+        &__info {
             display: flex;
+            background: #F6FBFF;
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            // background: #F6FBFF;
-            padding: 13rem 8rem;
+            padding: 5rem 0 2.4rem;
 
             @include breakpoint-up(medium) {
                 flex-direction: row;
-                // padding: 3rem 2rem 3rem 8rem;
+                padding: 3.5rem 0 2rem 7.5rem;
             }
 
+            &:nth-child(1) {
+                background: none;
+            }
         }
 
+        &__top__bg {
+            height: 100px;
+            background-repeat: no-repeat;
+
+            @include breakpoint-up(medium) {
+                height: 155px;
+            }
+        }
+
+        &__bottom__bg {
+            height: 55px;
+            background-repeat: no-repeat;
+
+            @include breakpoint-up(medium) {
+                height: 145px;
+            }
+        }
 
         &__text {
-            flex: 1;
+            flex: 0.65;
             text-align: center;
 
             @include breakpoint-up(medium) {
@@ -46,21 +128,24 @@
             h1 {
                 color: $veryDarkCyan;
                 margin-bottom: 0;
-                font-size: 1.2rem;
-                font-family: $headingFont;
+                font-size: 1.26rem;
 
                 @include breakpoint-up(medium) {
                     font-size: 2.3rem;
+                    margin-bottom: 18px;
                 }
             }
 
             p {
                 line-height: 1.5;
-                color: $grayishBlue;
-                font-size: 0.9375rem;
+                color: $veryDarkCyan;
+                font-size: 14.4px;
+                padding: 0 24px;
+                text-shadow: 0 0 #88d;
 
                 @include breakpoint-up(medium) {
-                    font-size: 1.125rem;
+                    font-size: 15px;
+                    padding: 0;
                 }
             }
         }
@@ -70,7 +155,7 @@
             order: -1;
             display: flex;
             justify-content: flex-end;
-            margin-bottom: 1rem;
+            margin-bottom: 3.9rem;
 
             @include breakpoint-up(medium) {
                 order: 0;
@@ -82,20 +167,15 @@
             }
 
             img {
-                width: 90%;
+                width: 70%;
                 display: block;
                 margin: auto;
 
                 @include breakpoint-up(medium) {
-                    width: 75%;
+                    width: 67%;
                     display: inline;
                 }
             }
         }
     }
-}
-
-
-body {
-    background: black;
 }
