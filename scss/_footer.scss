@@ -2,25 +2,33 @@
     color: #fff;
 
     &__top__bg {
-        height: 155px;
-        background: url("../images/bg-footer-top-desktop.svg");
+        height: 50px;
+        background: url("../images/bg-footer-top-mobile.svg");
         background-repeat: no-repeat;
+
+        @include breakpoint-up(medium) {
+            height: 155px;
+            background: url("../images/bg-footer-top-desktop.svg");
+        }
     }
 
     &__wrapper {
-        background: $veryDarkCyan;
-        padding: 7rem 7rem 6rem;
         margin: auto;
-        display: block;
+        display: flex;
+        flex-direction: column;
+        background: $veryDarkCyan;
+        padding: 4rem 1.7rem 3rem;
         grid-template-columns: 1.3fr 1fr;
 
         @include breakpoint-up(medium) {
             display: grid;
+            flex-direction: row;
+            padding: 7rem 7rem 6rem;
         }
     }
 
     &__logo {
-        width: 10.75rem;
+        width: 12.5rem;
 
         @include breakpoint-up(medium) {
             width: 13.5rem;
@@ -29,20 +37,29 @@
 
     &__desc {
         display: grid;
-        grid-template-columns: 0.06fr 1fr;
         align-items: center;
+        grid-template-columns: 1fr 1fr;
+
+        @include breakpoint-up(medium) {
+            grid-template-columns: 0.06fr 1fr;
+        }
 
         &:nth-child(2) {
-            margin: 0.5rem 0 0.8rem;
+            margin: 1.4rem 0 1rem;
+
+            @include breakpoint-up(medium) {
+                margin: 0.5rem 0 0.8rem;
+            }
         }
 
         p {
-            width: 18.7rem;
-            font-size: 15px;
+            width: 18rem;
             line-height: 1.7;
+            font-size: 13.5px;
             color: $veryPaleBlue;
 
             @include breakpoint-up(medium) {
+                font-size: 0.9375rem;
                 width: 20.625rem;
             }
 
@@ -52,69 +69,93 @@
         }
 
         img {
-            width: 1rem;
+            width: auto;
 
             @include breakpoint-up(medium) {
-                width: 18px;
+                width: 1.125rem;
             }
         }
     }
 
     &__social {
-        margin-top: 5rem;
+        width: 6.5rem;
         display: flex;
+        margin-top: 3rem;
         align-items: center;
         justify-content: space-between;
-        width: 8.5rem;
+
+        @include breakpoint-up(medium) {
+            width: 8.5rem;
+            margin-top: 5rem;
+        }
 
         img {
-            width: 30px;
+            width: 1.5rem;
+
+            @include breakpoint-up(medium) {
+                width: 1.875rem;
+            }
 
             &:hover {
-                cursor: pointer;
                 opacity: 0.7;
+                cursor: pointer;
             }
         }
     }
 
-    // &__main {}
-
     &__newsletter {
+        order: -1;
+        margin-bottom: 5rem;
+
+        @include breakpoint-up(medium) {
+            order: 1;
+            margin-bottom: 0;
+        }
+
         h2 {
-            font-size: 21.5px;
-            font-family: $normalFont;
-            font-weight: 600;
             margin-top: 0;
+            font-weight: 600;
+            font-size: 1.25rem;
+            font-family: $normalFont;
             text-transform: uppercase;
+
+            @include breakpoint-up(medium) {
+                font-size: 21.5px;
+            }
         }
 
         p {
-            width: 21rem;
+            width: 19rem;
             line-height: 1.7;
             color: $veryPaleBlue;
+
+            @include breakpoint-up(medium) {
+                width: 21rem;
+            }
         }
 
         &__form {
-            padding: 1.5rem 0;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
             width: auto;
             margin: auto;
+            display: flex;
+            padding: 1.5rem 0;
+            align-items: flex-end;
             flex-direction: column;
+            justify-content: space-between;
 
             @include breakpoint-up(large) {
                 width: 30rem;
+                align-items: center;
                 flex-direction: row;
             }
 
             input {
-                width: 90%;
-                padding: 14px 18px;
-                font-size: 16px;
+                width: 100%;
                 border: none;
                 outline: none;
+                font-size: 1rem;
                 border-radius: 5px;
+                padding: 0.875rem 1.125rem;
 
                 @include breakpoint-up(large) {
                     width: 62%;
@@ -122,27 +163,32 @@
             }
 
             .form__btn {
-                width: 90%;
-                padding: 0.75rem 1.25rem;
-                background: $pink;
+                width: 50%;
+                font-size: 0.875rem;
                 font-weight: 600;
-                font-size: 14px;
-                color: white;
+                margin-top: 1rem;
+                background: $pink;
+                position: relative;
+                text-align: center;
                 border-radius: 5px;
+                color: $veryPaleBlue;
+                padding: 0.75rem 1.25rem;
                 border: 2px solid transparent;
                 transition: all 0.3s ease-in-out;
-                margin-top: 1rem;
-                text-align: center;
 
                 @include breakpoint-up(large) {
                     width: 30%;
                     margin-top: 0;
+                }
+
+                &:hover::before {
+                    opacity: 1;
                 }
             }
         }
     }
 
     &__small__p {
-        font-size: 14px !important;
+        font-size: 0.875rem !important;
     }
 }

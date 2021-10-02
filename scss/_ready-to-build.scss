@@ -1,9 +1,9 @@
 .ready-to-build {
     display: flex;
-    margin: 3rem auto;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
+    justify-content: center;
+    margin: 3rem auto 15rem;
 
     @include breakpoint-up(medium) {
         margin: 6.8rem auto 10rem;

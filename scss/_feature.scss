@@ -8,11 +8,11 @@
 
         &__info {
             display: flex;
-            background: #F6FBFF;
             align-items: center;
-            justify-content: center;
-            flex-direction: column;
+            background: #F6FBFF;
             padding: 5rem 0 2.4rem;
+            flex-direction: column;
+            justify-content: center;
 
             @include breakpoint-up(medium) {
                 flex-direction: row;
@@ -51,26 +51,26 @@
             }
 
             h1 {
-                color: $veryDarkCyan;
                 margin-bottom: 0;
                 font-size: 1.26rem;
+                color: $veryDarkCyan;
 
                 @include breakpoint-up(medium) {
                     font-size: 2.3rem;
-                    margin-bottom: 18px;
+                    margin-bottom: 1.125rem
                 }
             }
 
             p {
                 line-height: 1.5;
-                color: $veryDarkCyan;
                 font-size: 14.4px;
-                padding: 0 24px;
+                padding: 0 1.5rem;
+                color: $veryDarkCyan;
                 text-shadow: 0 0 #88d;
 
                 @include breakpoint-up(medium) {
-                    font-size: 15px;
                     padding: 0;
+                    font-size: 0.9375rem;
                 }
             }
         }
@@ -79,8 +79,8 @@
             flex: 1;
             order: -1;
             display: flex;
-            justify-content: flex-end;
             margin-bottom: 3.9rem;
+            justify-content: flex-end;
 
             @include breakpoint-up(medium) {
                 order: 0;
@@ -93,8 +93,8 @@
 
             img {
                 width: 71%;
-                display: block;
                 margin: auto;
+                display: block;
 
                 @include breakpoint-up(medium) {
                     width: 67%;

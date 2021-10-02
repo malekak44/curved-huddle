@@ -19,14 +19,20 @@
     &__btn {
         color: $pink;
         font-size: 0.67rem;
+        position: relative;
         border-radius: 1.2rem;
         border: 1px solid $pink;
         padding: 0.35rem 1.2rem;
         text-transform: capitalize;
-        
+        transition: all 300ms ease-in-out;
+
         @include breakpoint-up(medium) {
             font-size: 0.9rem;
             padding: 0.5rem 1.75rem;
+        }
+
+        &:hover::before {
+            opacity: 1;
         }
     }
 }
